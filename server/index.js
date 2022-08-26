@@ -10,8 +10,8 @@ const bodyParser = require("body-parser");
 //Set Up
 const app = new express();
 const corsConfig = {
-  // origin: "http://localhost:3001",
-  origin: "http://192.168.1.144:3001",
+  origin: "http://localhost:3001",
+  // origin: "http://192.168.1.144:3001",
   credentials: true,
 };
 //Middleware
