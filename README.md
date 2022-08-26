@@ -50,9 +50,9 @@ npm start
 - [MongoDB](https://www.mongodb.com/) - Database and Atlas for DB hosting
 - [Mongoose](https://mongoosejs.com/) - Mongo ORM
 
-## Cool features
+## Features
 
-- ### Unique UI for User Type
+- ### Unique UX for User Type
 
   - Sign up as either a Buildi (client) or a Builder(contractor)
   - Buildi's can post projects, answer RFI's (request for information) and award projects to Builders
