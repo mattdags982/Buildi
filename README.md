@@ -4,7 +4,7 @@ Buildi is a mobile PWA designed to connect independent contractors with homeowne
 
 ## Screenshots
 
-<p align="center" display="flex">
+<p align="center" display="flex" gap="3px">
   <img src="./readme/clientprojectview.png" width="200px" />
   <img src="./readme/createproject.png" width="200px"/>
   <img src="./readme/contractorprojectview.png" width="200px"/>
@@ -13,31 +13,31 @@ Buildi is a mobile PWA designed to connect independent contractors with homeowne
 
 ## Getting started
 
-1. Run npm install in both the server and client folders
+#### 1. Run npm install in both the server and client folders
 
 ```bash
 npm install
 ```
 
-2. Turn on the server
+#### 2. Turn on the server
 
 ```bash
 node index.js
 ```
 
--make sure you are in the server folder
--should be on localhost:3000
+- make sure you are in the server folder
+- should be on localhost:3000
 
-3. Run the React client from another terminal
+#### 3. Run the React client from another terminal
 
 ```bash
 npm start
 ```
 
--make sure you are in the client folder
--should be on localhost:3001
+- make sure you are in the client folder
+- should be on localhost:3001
 
-## Build with
+## Tech Stack
 
 ### Front End
 
