@@ -4,10 +4,10 @@ Buildi is a mobile PWA designed to connect independent contractors with homeowne
 
 ## Screenshots
 
-<p align="center">
+<p align="center" display="flex">
   <img src="./readme/clientprojectview.png" />
   <img src="./readme/createproject.png" />
-  <img src="./readme/constractorprojectview.png" />
+  <img src="./readme/contractorprojectview.png" />
 
 </p>
 
