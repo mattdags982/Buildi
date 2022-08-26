@@ -13,23 +13,42 @@ Buildi is a mobile PWA designed to connect independent contractors with homeowne
 
 ## Getting started
 
-1. Run npm i in both the server and client folders
+1. Run npm install in both the server and client folders
 
 ```bash
 npm install
 ```
 
+2. Turn on the server
+
+```bash
+node index.js
+```
+
+-make sure you are in the server folder
+-should be on localhost:3000
+
+3. Run the React client from another terminal
+
+```bash
+npm start
+```
+
+-make sure you are in the client folder
+-should be on localhost:3001
+
 ## Build with
 
-- [Next.js](https://nextjs.org/) - Backend React framework
-  - [Typescript](https://www.typescriptlang.org/) - Strongly typed language for JavaScript
-- [TailwindCSS](https://tailwindcss.com/) - CSS framework
-- [MongoDB](https://www.mongodb.com/) - Database and Atlas for DB hosting
+### Front End
+
 - [React](https://reactjs.org/) - Main front end framework
-  - [Jest](https://jestjs.io/) - JavaScript testing framework
-  - [Multer](https://testing-library.com/) - Testing utilities for React
-  - [Mongoose](https://www.cypress.io/) - E2E testing for React
-- [React](https://cloudinary.com/) - Image hosting and resizing
+- [Material UI](https://mui.com/) - UI component library
+
+### Backend End
+
+- [Express](https://expressjs.com/) - Backend framework for Node.js
+- [MongoDB](https://www.mongodb.com/) - Database and Atlas for DB hosting
+- [Mongoose](https://mongoosejs.com/) - Mongo ORM
 
 ## Cool features
 
