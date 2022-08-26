@@ -13,7 +13,11 @@ Buildi is a mobile PWA designed to connect independent contractors with homeowne
 
 ## Getting started
 
-run npm i in server and client folders
+1. Run npm i in both the server and client folders
+
+```bash
+npm install
+```
 
 ## Build with
 
