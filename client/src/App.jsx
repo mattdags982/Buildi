@@ -16,11 +16,21 @@ import ContractorRegister from "./components/register/contractorRegister";
 //SERVICE AND UTILITIES IMPORTS
 import { getProjects } from "./service/projectService";
 import auth from "./utils/auth";
+import WebSorryScreen from "./components/WebSorryScreen";
 
 function App() {
   const initialState = auth.isAuthenticated();
   const [isAuthenticated, setIsAuthenticated] = useState(initialState);
   const [projects, setProjects] = useState([]);
+  const [matches, setMatches] = useState(
+    window.matchMedia("(max-width: 950px)").matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia("(max-width: 450px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
   useEffect(() => {
     getProjects().then((projects) => {
       const filteredProjects = projects.filter(
@@ -30,49 +40,52 @@ function App() {
     });
   }, []);
   return (
-    <>
-      <Routes>
-        <Route
-          path="/"
-          element={<Login setIsAuthenticated={setIsAuthenticated} />}
-        />
+    <div>
+      {matches && (
+        <Routes>
+          <Route
+            path="/"
+            element={<Login setIsAuthenticated={setIsAuthenticated} />}
+          />
 
-        <Route
-          path="/register"
-          element={<Register setIsAuthenticated={setIsAuthenticated} />}
-        />
-        <Route
-          path="/register/client"
-          element={<ClientRegister setIsAuthenticated={setIsAuthenticated} />}
-        />
-        <Route
-          path="/register/contractor"
-          element={
-            <ContractorRegister setIsAuthenticated={setIsAuthenticated} />
-          }
-        />
-        <Route
-          path="/client/*"
-          element={
-            <ClientNav
-              projects={projects}
-              setIsAuthenticated={setIsAuthenticated}
-              setProjects={setProjects}
-            />
-          }
-        ></Route>
-        <Route
-          path="/contractor/*"
-          element={
-            <ContractorNav
-              projects={projects}
-              setIsAuthenticated={setIsAuthenticated}
-              setProjects={setProjects}
-            />
-          }
-        />
-      </Routes>
-    </>
+          <Route
+            path="/register"
+            element={<Register setIsAuthenticated={setIsAuthenticated} />}
+          />
+          <Route
+            path="/register/client"
+            element={<ClientRegister setIsAuthenticated={setIsAuthenticated} />}
+          />
+          <Route
+            path="/register/contractor"
+            element={
+              <ContractorRegister setIsAuthenticated={setIsAuthenticated} />
+            }
+          />
+          <Route
+            path="/client/*"
+            element={
+              <ClientNav
+                projects={projects}
+                setIsAuthenticated={setIsAuthenticated}
+                setProjects={setProjects}
+              />
+            }
+          ></Route>
+          <Route
+            path="/contractor/*"
+            element={
+              <ContractorNav
+                projects={projects}
+                setIsAuthenticated={setIsAuthenticated}
+                setProjects={setProjects}
+              />
+            }
+          />
+        </Routes>
+      )}
+      {!matches && <WebSorryScreen />}
+    </div>
   );
 }
 
